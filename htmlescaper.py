@@ -2,6 +2,9 @@ import os
 import webapp2
 import jinja2
 import cgi
+from pygments import highlight
+from pygments.lexers import PythonLexer
+from pygments.formatters import HtmlFormatter 
 
 from google.appengine.ext import db
 
@@ -27,6 +30,7 @@ class Main(Handler):
         params = {}
         params['input'] = self.request.get("input")
         params['output'] = cgi.escape(self.request.get("input"))
+        params['formatted'] = highlight(self.request.get("input"), PythonLexer(), HtmlFormatter())
         self.render('test.html',**params)
                     
 app = webapp2.WSGIApplication([('/',Main)])

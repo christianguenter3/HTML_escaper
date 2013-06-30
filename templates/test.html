@@ -3,14 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>HTML escaper</title>
+<script type="text/javascript" src="/static/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="/static/jquery_scripts.js"></script>
 <link rel="stylesheet" type="text/css" href="/stylesheets/default.css">
 </head>
-<body>
+<body>	
 	<form method="post">
-		<div>
+		<div>		
 		<textarea class="textarea" name="input">{{input}}</textarea>
 		<button type="submit" class="button">Escape!</button>
-		<textarea class="textarea" name="output">{{output}}</textarea>
+		<div id="raw" name="output_textarea" class="textarea">{{output}}</div>
+		<div id="formatted" name="formatted_html" class="textarea">{{formatted}}</div>
 		</div>
 	</form>
 </body>
