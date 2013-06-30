@@ -1,4 +1,4 @@
-application: myblog099883123
+application: htmlescaper
 version: 1
 runtime: python27
 api_version: 1
@@ -9,7 +9,7 @@ handlers:
   static_dir: stylesheets
     
 - url: /.*
-  script: myblog.app
+  script: htmlescaper.app
 
 libraries:                                                                      
 - name: jinja2                                                                  
