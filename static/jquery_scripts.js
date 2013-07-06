@@ -5,6 +5,7 @@ $(document).ready(function() {
 	
 });		
 $(function() {
+	$('.textarea').resizable();
 	$('button')
 		.button({disabled: false})
 		.height("30px")
