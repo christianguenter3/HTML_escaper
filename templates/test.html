@@ -11,11 +11,15 @@
 </head>
 <body>	
 	<form method="post">
-		<div>		
-		<textarea class="textarea" name="input">{{input}}</textarea>
-		<button>Escape!</button>
-		<div id="raw" class="textarea" name="output_textarea" >{{output}}</div>
-		<!--<div id="formatted" name="formatted_html" class="textarea"> {{formatted}}</div> -->
+		<div id="accordion">	
+			<h3>Eingabe</h3>	
+			<div>
+				<textarea class="textarea" name="input">{{input}}</textarea></div>
+			<h3>Start</h3>
+			<div><div class="button">Escape!</div></div>			
+			<h3>Ausgabe</h3>
+			<div id="raw" class="textarea" name="output_textarea" >{{output}}</div>
+			<!--<div id="formatted" name="formatted_html" class="textarea"> {{formatted}}</div> -->
 		</div>
 	</form>
 </body>

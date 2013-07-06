@@ -2,15 +2,14 @@
 
 $(document).ready(function() {
 	$('#formatted').append($('#raw').text());
-	
-});		
-$(function() {
 	$('.textarea').resizable();
-	$('button')
-		.button({disabled: false})
+	//$('#accordion').accordion();
+	$('h3').hide();
+	$('.button')
+		.button()
 		.height("30px")
 		.width("150px")
 		.click(function( event ) {
-			
-	});
-});
+			$('form').submit();
+		});
+});		
